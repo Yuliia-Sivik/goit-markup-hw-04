@@ -112,8 +112,6 @@ address {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.container {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
@@ -145,6 +143,7 @@ address {
   padding: 16px 32px;
   min-width: 169px;
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover,
 .btn:focus {
@@ -203,7 +202,7 @@ address {
   height: 64px;
 }
 
-/* team section */
+/* our-team section */
 
 .team {
   background-color: #f4f4fd;
@@ -217,7 +216,7 @@ address {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
-  justify-content: center;
+
   margin: 0 0 72px 0;
 }
 .team__list {
@@ -232,8 +231,10 @@ address {
   text-align: center;
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* постійна тінь */
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
 .team-container {
   padding: 32px 0;
   text-align: center;
@@ -266,17 +267,28 @@ address {
   padding: 0;
   margin: 0;
 }
-.icon-link-item a {
+.icon-link-item {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
+}
+
+.icon-link-item a,
+.icon-link-item .icon-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
+
   background-color: #4d5ae5;
   text-decoration: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .icon-link-item a:hover,
 .icon-link-item a:focus {
   background-color: #404bbf;
@@ -288,9 +300,11 @@ address {
   justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .icon-social-link {
   width: 16px;
   height: 16px;
+  fill: #f4f4fd;
 }
 
 /* portfolio section */
@@ -322,7 +336,8 @@ address {
 }
 .portfolio-item:hover,
 .portfolio-item:focus {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-photo {
   display: block;
@@ -353,7 +368,7 @@ address {
   overflow: hidden; /* щоб параграф не виходив за межі зображення */
 }
 
-.portfolio-overlay-text {
+.overlay-text-p {
   font-family: "Roboto", sans-serif;
   position: absolute;
   top: 0;
@@ -361,14 +376,15 @@ address {
   width: 100%;
   height: 100%;
   background-color: #4d5ae5;
-  color: #f4f4fd;
+  --overlay-color: #f4f4fd;
+  color: var(--overlay-color);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   display: flex;
   align-items: flex-start;
-  padding: 40px 32px; /* відступ зверху 40px і з боків 32px */
+  padding: 40px 32px;
   text-align: left;
 
   transform: translateY(100%);
@@ -379,8 +395,8 @@ address {
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-item:hover .portfolio-overlay-text,
-.portfolio-item:focus .portfolio-overlay-text {
+.portfolio-item:hover .overlay-text-p,
+.portfolio-item:focus .overlay-text-p {
   transform: translateY(0);
   opacity: 1;
 }
@@ -393,16 +409,17 @@ address {
 .footer .container {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: baseline;
   max-width: 1158px;
   margin: 0 auto;
-  gap: 120px;
+
   padding: 100px 15px;
   box-sizing: border-box;
 }
 .container-footer {
   display: flex;
   flex-direction: column;
+  margin-right: 120px;
 }
 
 .logo-footer {
@@ -470,6 +487,9 @@ address {
 .social-icon {
   width: 24px;
   height: 24px;
+  --icon-fill: #f4f4fd;
+  fill: var(--icon-fill);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* HM-03 */
