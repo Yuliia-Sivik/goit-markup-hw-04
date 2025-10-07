@@ -216,7 +216,6 @@ address {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
-
   margin: 0 0 72px 0;
 }
 .team__list {
@@ -260,7 +259,7 @@ address {
   display: flex;
   justify-content: center;
 }
-.icon-link {
+.social-links {
   display: flex;
   justify-content: center;
   list-style: none;
@@ -268,7 +267,7 @@ address {
   padding: 0;
   margin: 0;
 }
-.icon-link-item {
+.team-social-item {
   display: flex;
   justify-content: center;
   align-items: center;
