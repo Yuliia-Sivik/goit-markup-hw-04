@@ -255,11 +255,11 @@ address {
   text-align: center;
   margin-bottom: 8px;
 }
-.social-links-wrapper {
+.social-links-wrapper-team {
   display: flex;
   justify-content: center;
 }
-.social-links {
+.social-links-team {
   display: flex;
   justify-content: center;
   list-style: none;
@@ -267,7 +267,7 @@ address {
   padding: 0;
   margin: 0;
 }
-.team-social-item {
+.social-item-team {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -281,7 +281,7 @@ address {
   --color-social-icon: #f4f4fd;
 }
 
-.icon-social {
+.social-link-team {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -293,12 +293,12 @@ address {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-social:hover,
-.icon-social:focus {
+.social-link-team:hover,
+.social-link-team:focus {
   background-color: var(--color-social-hover);
 }
 
-.icon-social-link {
+.social-icon-team {
   width: 16px;
   height: 16px;
   fill: var(--color-social-icon);
