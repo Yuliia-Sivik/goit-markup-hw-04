@@ -276,36 +276,33 @@ address {
   height: 40px;
 }
 
-.icon-link-item a,
-.icon-link-item .icon-social {
+:root {
+  --color-social-bg: #4d5ae5;
+  --color-social-hover: #404bbf;
+  --color-social-icon: #f4f4fd;
+}
+
+.icon-social {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-
-  background-color: #4d5ae5;
+  background-color: var(--color-social-bg);
   text-decoration: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-link-item a:hover,
-.icon-link-item a:focus {
-  background-color: #404bbf;
-}
-
-.icon-social {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.icon-social:hover,
+.icon-social:focus {
+  background-color: var(--color-social-hover);
 }
 
 .icon-social-link {
   width: 16px;
   height: 16px;
-  fill: #f4f4fd;
+  fill: var(--color-social-icon);
 }
 
 /* portfolio section */
@@ -389,17 +386,14 @@ address {
   text-align: left;
 
   transform: translateY(100%);
-  opacity: 0;
+  opacity: 1;
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item:hover .overlay-text-p,
 .portfolio-item:focus .overlay-text-p {
   transform: translateY(0%);
-  opacity: 1;
 }
 
 /* footer сss */
